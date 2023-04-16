@@ -58,6 +58,7 @@ Future<List<String>> getChangedLines() async {
   return changedLines;
 }
 
+/// Test comment
 List<LineRange> getFunctionLineNumbers(List<String> lines) {
   var functionLineNumbers = <LineRange>[];
   var currentFunction = _Function(null, -1, -1);
