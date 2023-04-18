@@ -1,16 +1,18 @@
-# script_tester
+# Comment Revision Checker
 
-A new Flutter project.
+This is a temporary repository, to test a script, that checks if the developer has changed functions and not updated their comments.
+
+First attempt only indactes function comments and not class comments.
+
+Used [Analyzer](https://pub.dev/packages/analyzer) to parse the changed files.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Make a change to a function (model_test.dart, was created for this purpose, but any function that has a /// comment above it should work);
+2. Run this command (be sure to be at the root of the project): 
 
-A few resources to get you started if this is your first Flutter project:
+```
+dart comment_checker.dart
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Should print out the functions files and their functions (name and line) that require comment revision.
